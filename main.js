@@ -55,3 +55,18 @@ const handleOnClick= index => {
     })
   })
 }
+
+const trailer = document.getElementById("trailer")
+
+window.onmousemove = e => {
+  const x = e.clientX-10;
+  const y = e.clientY-10;
+  
+  const keyframes = {
+    transform : `translate(${x}px, ${y}px)`
+  }
+  trailer.animate(keyframes, {
+    duration: 1000,
+    fill: "forwards"
+  })
+}
