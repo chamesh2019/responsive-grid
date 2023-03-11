@@ -48,10 +48,40 @@ body{
   left : 0px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: opacity 800ms ease;
   z-index: 1000;
 }
 
 body:hover > #trailer{
   opacity: 1;
+}
+
+#quote {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-family: "Rubik", sans-serif;
+/*   text-transform: uppercase; */
+  font-size: 4em;
+  font-weight: 700;
+  opacity: var(--font-opacity);
+  transition: opacity 500ms ease-in;
+}
+
+#icon-chess {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: var(--icon-opacity);
+  transition: opacity 800ms ease-in;
+}
+
+#quote-box {
+  pointer-events: none;
+  position:absolute;
+  left: 0%;
+  top: 0%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
