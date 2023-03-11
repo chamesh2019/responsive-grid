@@ -39,9 +39,13 @@ const colors = [
 
 let c = 0
 let tog = false
+const quotebox = document.getElementById("quote-box")
+quotebox.style.setProperty("--font-opacity", tog ? 0 : 1)
+quotebox.style.setProperty("--icon-opacity", tog ? 1 : 0)
 const handleOnClick= index => {
   const columns = Math.floor(document.body.clientWidth / 50);
   const rows = Math.floor(document.body.clientHeight / 50);
+
   c = c + 1
   console.log(colors[c % (colors.length-1)])
   tog = !tog
@@ -53,7 +57,9 @@ const handleOnClick= index => {
       grid:[columns, rows],
       from: index
     })
-  })
+  });
+  quotebox.style.setProperty("--font-opacity", tog ? 0 : 1)
+  quotebox.style.setProperty("--icon-opacity", tog ? 1 : 0)
 }
 
 const trailer = document.getElementById("trailer")
