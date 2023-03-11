@@ -65,13 +65,13 @@ body:hover > #trailer{
   font-size: 4em;
   font-weight: 700;
   opacity: var(--font-opacity);
-  transition: opacity 500ms ease-in;
+  transition: opacity 500ms linear;
 }
 
 #icon-chess {
   color: rgba(255, 255, 255, 0.4);
   opacity: var(--icon-opacity);
-  transition: opacity 800ms ease-in;
+  transition: opacity 500ms linear;
 }
 
 #quote-box {
